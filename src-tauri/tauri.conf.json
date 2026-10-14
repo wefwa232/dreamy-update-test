@@ -1,0 +1,48 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Dreamy Update Test",
+  "version": "0.1.0",
+  "identifier": "com.dreamy.updatetest",
+  "build": {
+    "frontendDist": "../src"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "label": "main",
+        "title": "Dreamy",
+        "width": 640,
+        "height": 760,
+        "minWidth": 420,
+        "minHeight": 520
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  },
+  "plugins": {
+    "updater": {
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDczRjQ4NTM4QUFDOTFBN0MKUldSOEdzbXFPSVgwY3djUDQxNzhuckZzYnNaZmRSemUwYS9Gc2gzcDduUm9Fd1JKS092MXJ2a1AK",
+      "endpoints": [
+        "https://github.com/wefwa232/dreamy-update-test/releases/latest/download/latest.json"
+      ],
+      "requireSignedVersion": true,
+      "windows": {
+        "installMode": "passive"
+      }
+    }
+  }
+}
