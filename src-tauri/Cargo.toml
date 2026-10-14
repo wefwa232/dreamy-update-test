@@ -1,6 +1,6 @@
 [package]
 name = "dreamy"
-version = "0.1.0"
+version = "0.1.1"
 description = "Personal dream and lucid dream journal"
 edition = "2021"
 
